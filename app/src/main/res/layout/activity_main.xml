@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/icon_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/input_suhu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_suhu"
+            app:srcCompat="@drawable/ic_temp_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_suhu"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:hint="@string/cost_of_service"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toEndOf="@id/icon_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_suhu_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ikonpilihan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/pilihan1pertanyaan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pilihan1pertanyaan"
+            app:srcCompat="@drawable/ic_temperature_1" />
+
+        <TextView
+            android:id="@+id/pilihan1pertanyaan"
+            style="@style/Widget.TempCal.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/how_was_the_service"
+            app:layout_constraintStart_toEndOf="@id/ikonpilihan1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_suhu" />
+
+        <RadioGroup
+            android:id="@+id/tip_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-4dp"
+            android:checkedButton="@id/celcius1"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/pilihan1pertanyaan"
+            app:layout_constraintTop_toBottomOf="@id/pilihan1pertanyaan">
+
+            <RadioButton
+                android:id="@+id/celcius1"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_20"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <RadioButton
+                android:id="@+id/kelvin1"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_18"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <RadioButton
+                android:id="@+id/farenheit1"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_15"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <RadioButton
+                android:id="@+id/reamur1"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reamur"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/konversi_ke_sini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-4dp"
+            android:checkedButton="@id/celcius2"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/konversi_ke_mana"
+            app:layout_constraintTop_toBottomOf="@id/konversi_ke_mana">
+
+            <RadioButton
+                android:id="@+id/celcius2"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_20" />
+
+            <RadioButton
+                android:id="@+id/kelvin2"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_18" />
+
+            <RadioButton
+                android:id="@+id/farenheit2"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_15" />
+
+            <RadioButton
+                android:id="@+id/reamur2"
+                style="@style/Widget.TempCal.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reamur" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/ikonpilihan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/konversi_ke_mana"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/konversi_ke_mana"
+            app:srcCompat="@drawable/ic_temperature_1" />
+
+        <TextView
+            android:id="@+id/konversi_ke_mana"
+            style="@style/Widget.TempCal.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/mau_konversi_kemana"
+            app:layout_constraintStart_toEndOf="@id/ikonpilihan2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tip_options" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/bulatkan"
+            style="@style/Widget.TempCal.CompoundButton.Switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:checked="false"
+            android:minHeight="48dp"
+            android:text="@string/round_up_tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ikonbulatkanhasil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/konversi_ke_sini"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <ImageView
+            android:id="@+id/ikonbulatkanhasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/bulatkan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bulatkan"
+            app:srcCompat="@drawable/ic_bulatkan_24" />
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bulatkan"
+            app:layout_constraintTop_toBottomOf="@id/bulatkan" />
+
+        <TextView
+            android:id="@+id/hasilkalkulasi"
+            style="@style/Widget.TempCal.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate_button"
+            tools:text="Hasil Suhu: N/A" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Konversi Suhu</string>
+    <string name="how_was_the_service">Mau konversi apa?</string>
+    <string name="cost_of_service">Satuan suhu</string>
+    <string name="_15">Fahrenheit</string>
+    <string name="_18">Kelvin</string>
+    <string name="_20">Celsius</string>
+    <string name="calculate">Hitung</string>
+    <string name="round_up_tip">Bulatkan hasil?</string>
+    <string name="tip_amount">Hasil Suhu : %s</string>
+    <string name="mau_konversi_kemana">Mau konversi kemana?</string>
+    <string name="reamur">Reamur</string>
+</resources>
